@@ -1,0 +1,13 @@
+{
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.754.4/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
+  "locale": "de-DE",
+  "localizedText": {
+    "L_StartPage": "Startseite",
+    "L_TextboxFocus": "TextboxFocus",
+    "L_Popups": "Popups",
+    "L_AnimationAPI": "AnimationAPI",
+    "L_CssAnimations": "CssAnimations",
+    "L_3rdPartyLibs": "3rdPartyLibs",
+    "L_Events": "Meldungen"
+  }
+}

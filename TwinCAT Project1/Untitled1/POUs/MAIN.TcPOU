@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.10">
+  <POU Name="MAIN" Id="{9dc12211-0425-4f01-97b8-bf7de7386f2f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	bToggleFlashing : BOOL;
+	nCounter: INT;
+	bGaugeOn: BOOL;
+	
+	GaugeTimer: TON;
+	GaugeTrig: R_TRIG;
+	bGaugeTimerOn: BOOL;
+	GaugeCounter: INT;
+	
+	fbGetLicenses : FB_GetLicensesEx;
+	
+	iWriteIntHere : INT;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[nCounter := nCounter +1;
+
+fbGetLicenses.bExecute := true;
+
+IF bGaugeOn THEN
+	GaugeTimer(IN:= bGaugeTimerOn, PT:=T#1S , Q=> , ET=> );
+	IF GaugeTimer.Q THEN
+		bGaugeTimerOn := FALSE;
+		GaugeTrig(CLK:= bGaugeOn, Q=> );
+		IF GaugeTrig.Q THEN
+			GaugeCounter := GaugeCounter + 1;
+			bGaugeOn := FALSE;
+		END_IF
+	END_IF
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="44" Count="0" />
+      <LineId Id="13" Count="1" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

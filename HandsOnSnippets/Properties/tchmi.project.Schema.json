@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "ButtonOperatorEvents": {
+      "properties": {
+        "onMouseClick": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseDoubleClick": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseDown": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseDownLeft": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseDownRight": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseEnter": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseLeave": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseMove": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseOut": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseOver": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseRightClick": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseUp": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseUpLeft": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseUpRight": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onMouseWheel": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onPressed": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onTouchCancel": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onTouchEnd": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onTouchStart": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "onTouchMove": {
+          "$ref": "tchmi:general#/definitions/Number"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

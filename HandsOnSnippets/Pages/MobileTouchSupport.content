@@ -1,0 +1,322 @@
+<div id="MobileTouchSupport" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="800" data-tchmi-height="640">
+
+<div id="TcHmiTextbox_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="610" data-tchmi-height-unit="px" data-tchmi-left="202" data-tchmi-left-unit="px" data-tchmi-text="%f%JSON.stringify(%i%BtnOperatorEvents%/i%,null,3)%/f%" data-tchmi-top="14" data-tchmi-top-unit="px" data-tchmi-width="290" data-tchmi-width-unit="px" data-tchmi-word-wrap="false" data-tchmi-multiline="true" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{"top":3,"right":3,"bottom":3,"left":3}
+</script>
+
+</div>
+<div id="TcHmiButton_24" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="61" data-tchmi-left-unit="px" data-tchmi-text="Button" data-tchmi-top="118" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiButton_24.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onPressed%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onPressed%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseClick",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseClick%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseClick%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseRightClick",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseRightClick%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseRightClick%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseDoubleClick",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseDoubleClick%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseDoubleClick%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseEnter",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseEnter%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseEnter%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseDown",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseDown%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseDown%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseUp",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseUp%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseUp%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseLeave",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseLeave%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseLeave%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseOver",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseOver%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseOver%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseDownLeft",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseDownLeft%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseDownLeft%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseDownRight",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseDownRight%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseDownRight%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseMove",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseMove%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseMove%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseUpLeft",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseUpLeft%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseUpLeft%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseUpRight",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseUpRight%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseUpRight%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseOut",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseOut%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseOut%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onMouseWheel",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onMouseWheel%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onMouseWheel%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onTouchStart",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onTouchStart%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onTouchStart%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onTouchMove",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onTouchMove%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onTouchMove%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onTouchEnd",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onTouchEnd%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onTouchEnd%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_24.onTouchCancel",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%BtnOperatorEvents::onTouchCancel%/i%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "%i%BtnOperatorEvents::onTouchCancel%/i%+1"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextblock_54" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="79" data-tchmi-height-unit="px" data-tchmi-left="622" data-tchmi-left-unit="px" data-tchmi-text="%f%navigator.maxTouchPoints%/f%" data-tchmi-top="179" data-tchmi-top-unit="px" data-tchmi-width="87" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="40" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
+</div>
+<div id="TcHmiTextblock_55" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="99" data-tchmi-height-unit="px" data-tchmi-left="552" data-tchmi-left-unit="px" data-tchmi-text="Your Screen has:" data-tchmi-top="69" data-tchmi-top-unit="px" data-tchmi-width="212" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="35" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
+</div>
+<div id="TcHmiTextblock_56" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="99" data-tchmi-height-unit="px" data-tchmi-left="552" data-tchmi-left-unit="px" data-tchmi-text="Touch Points" data-tchmi-top="272" data-tchmi-top-unit="px" data-tchmi-width="212" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="35" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
+</div>
+</div>

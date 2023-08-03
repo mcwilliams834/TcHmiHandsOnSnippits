@@ -1,0 +1,33 @@
+<div id="Websockets" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="800" data-tchmi-height="640">
+
+<div id="TcHmiButton_27" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="303" data-tchmi-height-unit="px" data-tchmi-left="191" data-tchmi-left-unit="px" data-tchmi-text="Login as Operator and run this function" data-tchmi-top="158" data-tchmi-top-unit="px" data-tchmi-width="453" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="40">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiButton_27.onPressed",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.writeEx('%s%PLC1.MAIN.iWriteIntHere%/s%', 42, function (data) {",
+          "    if (data.error === TcHmi.Errors.NONE) {",
+          "        // Handle success... ",
+          "        console.log(\"success!!\");",
+          "    } else {",
+          "        // Handle error... ",
+          "        console.log(\"Error\");",
+          "    }",
+          "});"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  }
+]
+</script>
+</div>
+</div>

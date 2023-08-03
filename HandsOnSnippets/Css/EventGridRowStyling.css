@@ -1,0 +1,182 @@
+﻿
+/*
+    Classe used by TcHmiEventGrid for events:
+
+    Type:
+
+
+    .message
+    .alarm
+
+
+    Severity:
+
+
+    .verbose
+    .info
+    .warning
+    .error
+    .critical
+
+
+    Unique to alarms:
+     // Alarms from the PLC cannot be "cleared" from TcHmi. Clear logic is handled within the PLC event
+     // Alarms can only be confirmed from TcHmi
+     // It is up to the developer to determine their own application uses for Alarms needing to be Confirmed and then Cleared, or only Cleared
+
+    .cleared-and-confirmed  // An alarm that has been confirmed, and also cleared. Clearing the alarm from the PLC also confirms it at the same time
+    .raised                 // An alarm in the raised state
+    .no-confirmation-needed // An alarm that is raised, but was not initialized to require confirmation (operator acknowledgment)
+    .confirmed              // An alarm that is in a confirmed state, but is still active and requires clearing once the issue has been resolved
+    .cleared                // An alarm that has been cleared and did not require confirmation (operator acknowledgment)
+
+
+    The below template affects the following row classes:
+
+    Messages and Alarms of x severity will be colored no matter the state
+    Alarms that are raised AND NOT confirmed blink fast
+    Alarms that are raised AND confirmed blink slow -- they are still raised but have recieved operator acknowledgment (confirmation of alarm)
+    Alarms that are historical - not active - maintain their color
+        - a defintion targeting cleared or cleared-and-confirmed could be defined for greater distinction between historical and active
+
+*/
+
+
+/*  Variables to be used through the rest of the CSS file  */
+:root {
+    --default-row-color: white;
+    --critical-row-color: red;
+    --error-row-color: orange;
+    --warning-row-color: yellow;
+    --info-row-color: lightblue;
+    --verbose-row-color: lightgrey;
+    --fast-blink: 1s;
+    --slow-blink: 3s;
+}
+
+@keyframes blinkCriticalAlarm {
+    0% {
+        background-color: var(--default-row-color);
+    }
+
+    50% {
+        background-color: var(--critical-row-color);
+    }
+}
+
+@keyframes blinkErrorAlarm {
+    0% {
+        background-color: var(--default-row-color);
+    }
+
+    50% {
+        background-color: var(--error-row-color);
+    }
+}
+
+@keyframes blinkWarningAlarm {
+    0% {
+        background-color: var(--default-row-color);
+    }
+
+    50% {
+        background-color: var(--warning-row-color);
+    }
+}
+
+@keyframes blinkInfoAlarm {
+    0% {
+        background-color: var(--default-row-color);
+    }
+
+    50% {
+        background-color: var(--info-row-color);
+    }
+}
+
+@keyframes blinkVerboseAlarm {
+    0% {
+        background-color: var(--default-row-color);
+    }
+
+    50% {
+        background-color: var(--verbose-row-color);
+    }
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.critical .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--critical-row-color)
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.critical.raised .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--critical-row-color);
+    animation: blinkCriticalAlarm var(--fast-blink) steps(1, end) 0s infinite;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.critical.confirmed .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--critical-row-color);
+    animation: blinkCriticalAlarm var(--slow-blink) steps(1, end) 0s infinite;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.error .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--error-row-color)
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.error.raised .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--error-row-color);
+    animation: blinkErrorAlarm var(--fast-blink) steps(1, end) 0s infinite;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.error.confirmed .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--error-row-color);
+    animation: blinkErrorAlarm var(--slow-blink) steps(1, end) 0s infinite;
+}
+
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.warning .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--warning-row-color)
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.warning.raised .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--warning-row-color);
+    animation: blinkWarningAlarm var(--fast-blink) steps(1, end) 0s infinite;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.warning.confirmed .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--warning-row-color);
+    animation: blinkWarningAlarm var(--slow-blink) steps(1, end) 0s infinite;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.info .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--info-row-color)
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.info.raised .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--info-row-color);
+    animation: blinkInfoAlarm var(--fast-blink) steps(1, end) 0s infinite;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.info.confirmed .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--info-row-color);
+    animation: blinkInfoAlarm var(--slow-blink) steps(1, end) 0s infinite;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.verbose .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--verbose-row-color)
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.verbose.raised .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--verbose-row-color);
+    animation: blinkVerboseAlarm var(--fast-blink) steps(1, end) 0s infinite;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-row.verbose.confirmed .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell {
+    background-color: var(--verbose-row-color);
+    animation: blinkVerboseAlarm var(--slow-blink) steps(1, end) 0s infinite;
+}
+
+
+
+
+
+
